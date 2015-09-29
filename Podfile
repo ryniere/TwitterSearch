@@ -5,4 +5,9 @@ platform :ios, '8.0'
 
 
 # Twitter SDK
-pod 'Fabric', '~> 1.5.1'
+pod 'Fabric'
+pod 'TwitterKit'
+pod 'TwitterCore'
+pod 'STTwitter'
+
+pod 'SDWebImage', '~>3.7.1'
