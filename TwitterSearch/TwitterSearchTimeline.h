@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TwitterSearchTimeline : TWTRTimelineViewController
+@interface TwitterSearchTimeline : UIViewController<UITableViewDelegate, UITableViewDataSource>
+
++ (instancetype)loadFromNib:(NSString *)query;
 
 @end

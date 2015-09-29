@@ -7,8 +7,13 @@
 //
 
 #import "HomeViewController.h"
+#import <TwitterKit/TwitterKit.h>
+#import "TwitterSearchTimeline.h"
+
 
 @interface HomeViewController ()
+
+@property (weak, nonatomic) IBOutlet UITextField *searchTextField;
 
 @end
 
@@ -17,11 +22,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+
+
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)searchButtonAction:(id)sender {
+    
+    TwitterSearchTimeline *viewController = [TwitterSearchTimeline loadFromNib:self.searchTextField.text];
+    
+    [self presentViewController:viewController animated:true completion:nil];
+    
 }
 
 @end

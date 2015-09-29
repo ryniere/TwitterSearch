@@ -8,3 +8,6 @@ platform :ios, '8.0'
 pod 'Fabric'
 pod 'TwitterKit'
 pod 'TwitterCore'
+pod 'STTwitter'
+
+pod 'SDWebImage', '~>3.7.1'
