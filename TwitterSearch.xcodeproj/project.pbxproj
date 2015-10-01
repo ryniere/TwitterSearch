@@ -293,6 +293,7 @@
 				TargetAttributes = {
 					418100081BB20CD80076962F = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = Z6KC2UFRV2;
 					};
 					418100211BB20CD80076962F = {
 						CreatedOnToolsVersion = 7.0;
@@ -565,6 +566,8 @@
 			baseConfigurationReference = F2449D5E10C2556DB94BE34E /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = TwitterSearch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ryniere.TwitterSearch;
@@ -577,6 +580,8 @@
 			baseConfigurationReference = BED12ACF7815531BEC65BF9B /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = TwitterSearch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ryniere.TwitterSearch;

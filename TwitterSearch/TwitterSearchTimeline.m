@@ -10,10 +10,12 @@
 #import "TwitterAPI.h"
 #import "TweetCellTableViewCell.h"
 #import <SDWebImage/UIImageView+WebCache.h>
+#import <UIColor_HexRGB/UIColor+HexRGB.h>
 
 @interface TwitterSearchTimeline ()
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UILabel *queryLabel;
 
 @property (nonatomic,strong) NSArray *results;
 @property (nonatomic,strong) NSString *query;
@@ -44,8 +46,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self.view setBackgroundColor:[UIColor colorWithHex:@"5E9FCA"]];
+    
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+    
+    self.queryLabel.text = [NSString stringWithFormat:@"\"%@\"", self.query ];
     
     [self.tableView registerNib:[UINib nibWithNibName:@"TweetCellTableViewCell" bundle:nil] forCellReuseIdentifier:@"cell"];
     
@@ -69,7 +75,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    return 90.0;
+    return 100.0;
     
 }
 
@@ -92,9 +98,11 @@
     
     NSDictionary *tweet = (self.results)[indexPath.row];
     cell.nameLabel.text = tweet[@"user"][@"name"];
+    [cell.nameLabel sizeToFit];
     NSString *profileUrl = tweet[@"user"][@"profile_image_url"];
     
     SDWebImageManager *manager = [SDWebImageManager sharedManager];
+    [cell.profileImage setImage:nil];
     [manager downloadImageWithURL: [[NSURL alloc] initWithString:profileUrl] options: 0 progress: nil completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
         if (image) {
             [cell.profileImage setImage:image];
@@ -107,6 +115,8 @@
     cell.profileImage.layer.borderWidth = 0;
     
     cell.text.text = tweet[@"text"];
+    [cell.text sizeToFit];
+    
     
     return cell;
     
