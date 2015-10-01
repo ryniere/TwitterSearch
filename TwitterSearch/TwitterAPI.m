@@ -68,4 +68,38 @@ static NSString *const kTwitterApiBaseUrl = @"https://api.twitter.com/1.1/";
     }
 }
 
+- (void) getTrends:(NSString *)locationID success:(void(^)(NSArray *trends))success fail:(void(^)(NSError *error))fail{
+    
+    NSError *clientError;
+    NSString *url = [NSString stringWithFormat:@"%@%@", kTwitterApiBaseUrl, @"trends/place.json" ];
+    NSURLRequest *request = [[[Twitter sharedInstance] APIClient]URLRequestWithMethod:@"GET" URL:url parameters:@{@"id" : locationID} error:&clientError];
+    
+    if (request) {
+        [self sendTwitterRequest:request completion:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+            if (data) {
+                // handle the response data e.g.
+                NSError *jsonError;
+                NSDictionary *response = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
+                
+                if (jsonError == nil) {
+                    NSArray *trends = [response valueForKey:@"trends"][0];
+                    success(trends);
+                }
+                else{
+                    NSLog(@"Error: %@", jsonError);
+                    fail(jsonError);
+                }
+            }
+            else {
+                NSLog(@"Error: %@", connectionError);
+                fail(connectionError);
+            }
+        }];
+    }
+    else {
+        NSLog(@"Error: %@", clientError);
+        fail(clientError);
+    }
+}
+
 @end

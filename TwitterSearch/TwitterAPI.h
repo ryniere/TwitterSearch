@@ -28,4 +28,13 @@
  */
 - (void) searchTweetsWithQuery:(NSString *)query success:(void(^)(NSDictionary *searchMetadata, NSArray *statuses))success fail:(void(^)(NSError *error))fail;
 
+/**
+ *  Get the trending topics of a specific location
+ *
+ *  @param locationID  The Yahoo! Where On Earth ID of the location to return trending information for. Global information is available by using 1 as the WOEID
+ *  @param success    block to execute on success
+ *  @param fail       block to execute on fail
+ */
+- (void) getTrends:(NSString *)locationID success:(void(^)(NSArray *trends))success fail:(void(^)(NSError *error))fail;
+
 @end
