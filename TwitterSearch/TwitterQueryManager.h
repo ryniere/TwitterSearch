@@ -16,7 +16,20 @@
 
 - (void) addTwitterQuery:(TwitterQuery *) twitterQuery;
 
+/**
+ *  Get the queries already searched
+ *
+ *  @return
+ */
 - (RLMResults *) getLastTwitterQueries;
+
+/**
+ *  Get the searched query at given index
+ *
+ *  @param index index to retrieve
+ *
+ *  @return query at given index
+ */
 - (TwitterQuery *) getLastTwitterQueryAtIndex:(NSInteger)index;
 
 @end

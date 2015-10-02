@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TweetCellTableViewCell.h"
 
-@interface TwitterSearchTimeline : UIViewController<UITableViewDelegate, UITableViewDataSource>
+@interface TwitterSearchTimeline : UIViewController<UITableViewDelegate, UITableViewDataSource, SWTableViewCellDelegate>
 
 + (instancetype)loadFromNib:(NSString *)query;
 

@@ -139,7 +139,7 @@ static NSString *const kBackgroundColor = @"#F5F5F5";
         
         cell.textLabel.text = query.query;
     }
-  
+    
     
     return cell;
     
@@ -154,7 +154,7 @@ static NSString *const kBackgroundColor = @"#F5F5F5";
         [[TwitterQueryManager sharedManager] addTwitterQuery:query];
         
         [self openTwitterSearchTimelineWithQuery:query.query];
-    }  
+    }
 }
 
 - (void)openTwitterSearchTimelineWithQuery:(NSString *)query{

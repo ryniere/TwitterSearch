@@ -8,7 +8,6 @@
 
 #import "TwitterSearchTimeline.h"
 #import "TwitterAPI.h"
-#import "TweetCellTableViewCell.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 #import <UIColor_HexRGB/UIColor+HexRGB.h>
 
@@ -93,6 +92,8 @@
     
     TweetCellTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
     
+    cell.leftUtilityButtons = [self leftButtons];
+    cell.delegate = self;
     
    
     
@@ -120,6 +121,26 @@
     
     return cell;
     
+}
+
+- (NSArray *)leftButtons
+{
+    NSMutableArray *leftUtilityButtons = [NSMutableArray new];
+    
+    [leftUtilityButtons sw_addUtilityButtonWithColor:
+     [UIColor colorWithRed:0.07 green:0.75f blue:0.16f alpha:1.0]
+                                                icon:[UIImage imageNamed:@"check.png"]];
+    [leftUtilityButtons sw_addUtilityButtonWithColor:
+     [UIColor colorWithRed:1.0f green:1.0f blue:0.35f alpha:1.0]
+                                                icon:[UIImage imageNamed:@"clock.png"]];
+    [leftUtilityButtons sw_addUtilityButtonWithColor:
+     [UIColor colorWithRed:1.0f green:0.231f blue:0.188f alpha:1.0]
+                                                icon:[UIImage imageNamed:@"cross.png"]];
+    [leftUtilityButtons sw_addUtilityButtonWithColor:
+     [UIColor colorWithRed:0.55f green:0.27f blue:0.07f alpha:1.0]
+                                                icon:[UIImage imageNamed:@"list.png"]];
+    
+    return leftUtilityButtons;
 }
 
 - (IBAction)close:(id)sender {
