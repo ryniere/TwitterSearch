@@ -261,28 +261,28 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		0DAAC34E89D5D95B56B4F436AEBEB230 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 6F84376FC6627E334DAC6ADDBF22E317;
-			remoteInfo = STTwitter;
-		};
-		50F405D55AB09EB74EA7AAC180244D31 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 9666688CB41B38A9914616144C9C7A3E;
-			remoteInfo = SDWebImage;
-		};
-		A44AC0F97F563506F36DE8935E978FE2 /* PBXContainerItemProxy */ = {
+		2F5C7FC2F9B6CA9B5A92C3B78BA5629F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = D7340328F5657BED63B31F34DBB49D8D;
 			remoteInfo = "UIColor-HexRGB";
 		};
-		BD9FBE0E4B237A85B264429919FA2CA1 /* PBXContainerItemProxy */ = {
+		6E910FE5D2399100746BCF974F82BC99 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6F84376FC6627E334DAC6ADDBF22E317;
+			remoteInfo = STTwitter;
+		};
+		BEB050B47CBC724F9B3C998CF2AE6A3E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9666688CB41B38A9914616144C9C7A3E;
+			remoteInfo = SDWebImage;
+		};
+		F4FDB6A01A77E4121278E66487FC5387 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
@@ -1375,10 +1375,10 @@
 			buildRules = (
 			);
 			dependencies = (
-				4263454E8F00E86F6FBD0D4616391C82 /* PBXTargetDependency */,
-				8F39A242A3B43F336A463EEFC5D1CFC8 /* PBXTargetDependency */,
-				E547DF9E3D75D7D859C123F16A524CBD /* PBXTargetDependency */,
-				D90561D9242864F06F3452C533DAC718 /* PBXTargetDependency */,
+				DEBE1B5728A3A8666166E6EEF3D153E8 /* PBXTargetDependency */,
+				BE7660418BE4EF3C8CE004686AEE5B36 /* PBXTargetDependency */,
+				DA46BD7ED4106CFE0145ED147C4D55A6 /* PBXTargetDependency */,
+				4AE4B896C7B66EA616DE75AFAB9B1F87 /* PBXTargetDependency */,
 			);
 			name = Pods;
 			productName = Pods;
@@ -1564,29 +1564,29 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		4263454E8F00E86F6FBD0D4616391C82 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Realm;
-			target = 862F37258B8CB6BD53B97E10BFC8BFD3 /* Realm */;
-			targetProxy = BD9FBE0E4B237A85B264429919FA2CA1 /* PBXContainerItemProxy */;
-		};
-		8F39A242A3B43F336A463EEFC5D1CFC8 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SDWebImage;
-			target = 9666688CB41B38A9914616144C9C7A3E /* SDWebImage */;
-			targetProxy = 50F405D55AB09EB74EA7AAC180244D31 /* PBXContainerItemProxy */;
-		};
-		D90561D9242864F06F3452C533DAC718 /* PBXTargetDependency */ = {
+		4AE4B896C7B66EA616DE75AFAB9B1F87 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "UIColor-HexRGB";
 			target = D7340328F5657BED63B31F34DBB49D8D /* UIColor-HexRGB */;
-			targetProxy = A44AC0F97F563506F36DE8935E978FE2 /* PBXContainerItemProxy */;
+			targetProxy = 2F5C7FC2F9B6CA9B5A92C3B78BA5629F /* PBXContainerItemProxy */;
 		};
-		E547DF9E3D75D7D859C123F16A524CBD /* PBXTargetDependency */ = {
+		BE7660418BE4EF3C8CE004686AEE5B36 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SDWebImage;
+			target = 9666688CB41B38A9914616144C9C7A3E /* SDWebImage */;
+			targetProxy = BEB050B47CBC724F9B3C998CF2AE6A3E /* PBXContainerItemProxy */;
+		};
+		DA46BD7ED4106CFE0145ED147C4D55A6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = STTwitter;
 			target = 6F84376FC6627E334DAC6ADDBF22E317 /* STTwitter */;
-			targetProxy = 0DAAC34E89D5D95B56B4F436AEBEB230 /* PBXContainerItemProxy */;
+			targetProxy = 6E910FE5D2399100746BCF974F82BC99 /* PBXContainerItemProxy */;
+		};
+		DEBE1B5728A3A8666166E6EEF3D153E8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Realm;
+			target = 862F37258B8CB6BD53B97E10BFC8BFD3 /* Realm */;
+			targetProxy = F4FDB6A01A77E4121278E66487FC5387 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

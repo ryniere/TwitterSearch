@@ -1,7 +1,7 @@
 PODS:
-  - Fabric (1.5.1):
-    - Fabric/Base (= 1.5.1)
-  - Fabric/Base (1.5.1)
+  - Fabric (1.5.4):
+    - Fabric/Base (= 1.5.4)
+  - Fabric/Base (1.5.4)
   - Realm (0.95.2):
     - Realm/Headers (= 0.95.2)
   - Realm/Headers (0.95.2)
@@ -9,8 +9,8 @@ PODS:
     - SDWebImage/Core (= 3.7.3)
   - SDWebImage/Core (3.7.3)
   - STTwitter (0.2.2)
-  - TwitterCore (1.11.1)
-  - TwitterKit (1.11.1)
+  - TwitterCore (1.11.3)
+  - TwitterKit (1.11.3)
   - UIColor-HexRGB (1.0.1)
 
 DEPENDENCIES:
@@ -23,12 +23,12 @@ DEPENDENCIES:
   - UIColor-HexRGB (~> 1.0.1)
 
 SPEC CHECKSUMS:
-  Fabric: 03c3b3fe77e11a2bc31421b989a9c7adaa4779a5
+  Fabric: 93e3053474839d8df33a61a29c328a48c83792c8
   Realm: 4c026902041bb39c4bd083ebc5e88f4f17973d72
   SDWebImage: 1d2b1a1efda1ade1b00b6f8498865f8ddedc8a84
   STTwitter: eb85d8770ddb0f8989f341cf41ea875e90ac6e7f
-  TwitterCore: 9ec69df7571207044b1a2f57ae2c87fe73348ac5
-  TwitterKit: bce9f0eac1e186caab5aa570d64d82c5cb9089be
+  TwitterCore: ac822b826d021c483569d3d0588645dfa543bee9
+  TwitterKit: 8900e0032610749cebb37a9950f40fd1da606587
   UIColor-HexRGB: daccfa7e936af664369734a164b0309087d7f970
 
 COCOAPODS: 0.38.2
