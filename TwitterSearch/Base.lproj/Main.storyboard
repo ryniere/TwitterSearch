@@ -169,8 +169,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6bO-jT-ayY">
-                                <rect key="frame" x="131" y="17" width="357" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6bO-jT-ayY">
+                                <rect key="frame" x="49" y="17" width="316" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -181,22 +181,8 @@
                                     <rect key="frame" x="59" y="8" width="296" height="24"/>
                                 </variation>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BSQ-Il-OGC">
-                                <rect key="frame" x="558" y="16" width="30" height="22"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <state key="normal" backgroundImage="close"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="364" y="13" width="30" height="30"/>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="364" y="8" width="30" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="close:" destination="LgQ-wv-rHW" eventType="touchUpInside" id="mAg-pT-PQE"/>
-                                </connections>
-                            </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="V1J-rB-Vqn">
-                                <rect key="frame" x="0.0" y="51" width="600" height="549"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="V1J-rB-Vqn">
+                                <rect key="frame" x="0.0" y="50" width="414" height="686"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="separatorColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
@@ -209,8 +195,33 @@
                                     <outlet property="delegate" destination="LgQ-wv-rHW" id="qNn-aO-wjE"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BSQ-Il-OGC">
+                                <rect key="frame" x="373" y="10" width="30" height="30"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <state key="normal" backgroundImage="close"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="364" y="13" width="30" height="30"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="364" y="8" width="30" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="close:" destination="LgQ-wv-rHW" eventType="touchUpInside" id="mAg-pT-PQE"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.40000000000000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="VEb-Bc-1ga" firstAttribute="top" secondItem="V1J-rB-Vqn" secondAttribute="bottom" id="61v-Bk-YiG"/>
+                            <constraint firstAttribute="trailing" secondItem="BSQ-Il-OGC" secondAttribute="trailing" constant="11" id="Iyd-AN-t6p"/>
+                            <constraint firstAttribute="trailing" secondItem="V1J-rB-Vqn" secondAttribute="trailing" id="Ja8-dJ-Z8o"/>
+                            <constraint firstItem="V1J-rB-Vqn" firstAttribute="top" secondItem="c9M-Xi-PGN" secondAttribute="bottom" constant="50" id="Ryh-YB-ppW"/>
+                            <constraint firstItem="6bO-jT-ayY" firstAttribute="centerX" secondItem="1Sm-lN-wZ9" secondAttribute="centerX" id="Ujx-a3-fyN"/>
+                            <constraint firstItem="V1J-rB-Vqn" firstAttribute="leading" secondItem="1Sm-lN-wZ9" secondAttribute="leading" id="dER-Ka-eC2"/>
+                            <constraint firstItem="6bO-jT-ayY" firstAttribute="top" secondItem="c9M-Xi-PGN" secondAttribute="bottom" constant="17" id="est-ub-ZAo"/>
+                            <constraint firstItem="V1J-rB-Vqn" firstAttribute="top" secondItem="BSQ-Il-OGC" secondAttribute="bottom" constant="10" id="mPy-ac-g9i"/>
+                            <constraint firstItem="BSQ-Il-OGC" firstAttribute="top" secondItem="c9M-Xi-PGN" secondAttribute="bottom" constant="10" id="oBl-Mg-jPd"/>
+                        </constraints>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>

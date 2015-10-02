@@ -66,6 +66,8 @@
 		418100331BB20CD80076962F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		418100401BB25BEB0076962F /* TwitterSearchTimeline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterSearchTimeline.h; sourceTree = "<group>"; };
 		418100411BB25BEB0076962F /* TwitterSearchTimeline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterSearchTimeline.m; sourceTree = "<group>"; };
+		41A67C4A1BBF10E5006DE033 /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/Main.strings; sourceTree = "<group>"; };
+		41A67C4B1BBF10E5006DE033 /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		41F8F89B1BB8A659005EE075 /* TweetCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TweetCellTableViewCell.h; sourceTree = "<group>"; };
 		41F8F89C1BB8A659005EE075 /* TweetCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TweetCellTableViewCell.m; sourceTree = "<group>"; };
 		41F8F89D1BB8A659005EE075 /* TweetCellTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TweetCellTableViewCell.xib; sourceTree = "<group>"; };
@@ -484,6 +486,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				418100161BB20CD80076962F /* Base */,
+				41A67C4A1BBF10E5006DE033 /* pt */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -492,6 +495,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				4181001B1BB20CD80076962F /* Base */,
+				41A67C4B1BBF10E5006DE033 /* pt */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
