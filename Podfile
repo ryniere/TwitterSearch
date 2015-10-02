@@ -5,4 +5,13 @@ platform :ios, '8.0'
 
 
 # Twitter SDK
-pod 'Fabric', '~> 1.5.1'
+pod 'Fabric'
+pod 'TwitterKit'
+pod 'TwitterCore'
+pod 'STTwitter'
+
+pod 'SDWebImage', '~>3.7.1'
+pod 'UIColor-HexRGB', '~> 1.0.1'
+pod 'SWTableViewCell', '~> 0.3.7'
+
+pod 'Realm', '~> 0.95.2'
