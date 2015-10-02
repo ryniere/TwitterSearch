@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		2AFAB2CF478AB253E89CBEDA /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 566405C729F44046F1067049 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		411215B61BB8652700AB1646 /* TwitterAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 411215B51BB8652700AB1646 /* TwitterAPI.m */; settings = {ASSET_TAGS = (); }; };
+		41128EFB1BBDFE3200EAD69F /* TwitterQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 41128EFA1BBDFE3200EAD69F /* TwitterQuery.m */; settings = {ASSET_TAGS = (); }; };
+		41128EFF1BBDFF5800EAD69F /* TwitterQueryManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 41128EFE1BBDFF5800EAD69F /* TwitterQueryManager.m */; settings = {ASSET_TAGS = (); }; };
 		4181000E1BB20CD80076962F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4181000D1BB20CD80076962F /* main.m */; };
 		418100111BB20CD80076962F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 418100101BB20CD80076962F /* AppDelegate.m */; };
 		418100141BB20CD80076962F /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 418100131BB20CD80076962F /* HomeViewController.m */; };
@@ -42,6 +44,10 @@
 /* Begin PBXFileReference section */
 		411215B41BB8652700AB1646 /* TwitterAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterAPI.h; sourceTree = "<group>"; };
 		411215B51BB8652700AB1646 /* TwitterAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterAPI.m; sourceTree = "<group>"; };
+		41128EF91BBDFE3200EAD69F /* TwitterQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterQuery.h; sourceTree = "<group>"; };
+		41128EFA1BBDFE3200EAD69F /* TwitterQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterQuery.m; sourceTree = "<group>"; };
+		41128EFD1BBDFF5800EAD69F /* TwitterQueryManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterQueryManager.h; sourceTree = "<group>"; };
+		41128EFE1BBDFF5800EAD69F /* TwitterQueryManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterQueryManager.m; sourceTree = "<group>"; };
 		418100091BB20CD80076962F /* TwitterSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitterSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4181000D1BB20CD80076962F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4181000F1BB20CD80076962F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -103,11 +109,22 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		411215B81BB8796800AB1646 /* Model */ = {
+		411215B81BB8796800AB1646 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				41128EF91BBDFE3200EAD69F /* TwitterQuery.h */,
+				41128EFA1BBDFE3200EAD69F /* TwitterQuery.m */,
 			);
-			name = Model;
+			name = Models;
+			sourceTree = "<group>";
+		};
+		41128EFC1BBDFF3200EAD69F /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				41128EFD1BBDFF5800EAD69F /* TwitterQueryManager.h */,
+				41128EFE1BBDFF5800EAD69F /* TwitterQueryManager.m */,
+			);
+			name = DataManager;
 			sourceTree = "<group>";
 		};
 		418100001BB20CD80076962F = {
@@ -135,8 +152,9 @@
 		4181000B1BB20CD80076962F /* TwitterSearch */ = {
 			isa = PBXGroup;
 			children = (
+				41128EFC1BBDFF3200EAD69F /* DataManager */,
 				41F8F89A1BB8A62C005EE075 /* Cells */,
-				411215B81BB8796800AB1646 /* Model */,
+				411215B81BB8796800AB1646 /* Models */,
 				418100451BB25EE60076962F /* WebServices */,
 				418100441BB25EC70076962F /* Main */,
 				418100431BB25EB20076962F /* ViewControllers */,
@@ -423,8 +441,10 @@
 				418100141BB20CD80076962F /* HomeViewController.m in Sources */,
 				418100111BB20CD80076962F /* AppDelegate.m in Sources */,
 				41F8F89E1BB8A659005EE075 /* TweetCellTableViewCell.m in Sources */,
+				41128EFF1BBDFF5800EAD69F /* TwitterQueryManager.m in Sources */,
 				418100421BB25BEB0076962F /* TwitterSearchTimeline.m in Sources */,
 				4181000E1BB20CD80076962F /* main.m in Sources */,
+				41128EFB1BBDFE3200EAD69F /* TwitterQuery.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

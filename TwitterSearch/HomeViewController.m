@@ -11,6 +11,7 @@
 #import "TwitterSearchTimeline.h"
 #import "TwitterAPI.h"
 #import <UIColor_HexRGB/UIColor+HexRGB.h>
+#import "TwitterQueryManager.h"
 
 
 @interface HomeViewController ()
@@ -38,6 +39,25 @@ static NSString *const kBackgroundColor = @"#F5F5F5";
     self.trendsTableView.delegate = self;
     self.trendsTableView.dataSource = self;
     
+    [self.lastSearchsTableView registerClass:UITableViewCell.self forCellReuseIdentifier:@"trendCell"];
+    self.lastSearchsTableView.delegate = self;
+    self.lastSearchsTableView.dataSource = self;
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    [self reloadLastSearchData];
+    [self reloadTrendsData];
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+- (void)reloadTrendsData{
+    
     [[TwitterAPI sharedManager] getTrends:@"1" success:^(NSArray *trends) {
         
         self.trends = trends;
@@ -47,24 +67,34 @@ static NSString *const kBackgroundColor = @"#F5F5F5";
     } fail:^(NSError *error) {
         
     }];
-
-
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)reloadLastSearchData{
+    
+    [self.lastSearchsTableView reloadData];
 }
 
 #pragma TableView Delegate Methods
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     
+    return 30;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
     if (tableView == self.trendsTableView) {
         
-        return 30;
+        NSDictionary *trend = (self.trends)[indexPath.row];
+        [self openTwitterSearchTimelineWithQuery:trend[@"name"]];
     }
-    return 20;
+    else if (tableView == self.lastSearchsTableView){
+        
+        TwitterQuery *query = [[TwitterQueryManager sharedManager] getLastTwitterQueryAtIndex:[indexPath row]];
+        [self openTwitterSearchTimelineWithQuery:query.query];
+    }
+    
+    
 }
 
 #pragma TableView Data Source Methods
@@ -78,6 +108,10 @@ static NSString *const kBackgroundColor = @"#F5F5F5";
         }
         return 0;
     }
+    else if (tableView == self.lastSearchsTableView){
+        
+        return [[[TwitterQueryManager sharedManager] getLastTwitterQueries] count];
+    }
     
     return 0;
 }
@@ -87,14 +121,21 @@ static NSString *const kBackgroundColor = @"#F5F5F5";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"trendCell"];
     
     
-     [cell.contentView setBackgroundColor:[UIColor colorWithHex:kBackgroundColor]];
-    
-    NSDictionary *tweet = (self.trends)[indexPath.row];
+    [cell.contentView setBackgroundColor:[UIColor colorWithHex:kBackgroundColor]];
     cell.textLabel.font = [UIFont fontWithName:@"HelveticaNeue" size:9];
-    cell.textLabel.text = tweet[@"name"];
     
+    if (tableView == self.trendsTableView) {
+        
+        NSDictionary *trend = (self.trends)[indexPath.row];
+        cell.textLabel.text = trend[@"name"];
+    }
+    else if (tableView == self.lastSearchsTableView){
+        
+        TwitterQuery *query = [[TwitterQueryManager sharedManager] getLastTwitterQueryAtIndex:[indexPath row]];
+        
+        cell.textLabel.text = query.query;
+    }
   
-    
     
     return cell;
     
@@ -102,7 +143,19 @@ static NSString *const kBackgroundColor = @"#F5F5F5";
 
 - (IBAction)searchButtonAction:(id)sender {
     
-    TwitterSearchTimeline *viewController = [TwitterSearchTimeline loadFromNib:self.searchTextField.text];
+    
+    TwitterQuery *query = [[TwitterQuery alloc] init];
+    query.query = self.searchTextField.text;
+    
+    [[TwitterQueryManager sharedManager] addTwitterQuery:query];
+    
+    [self openTwitterSearchTimelineWithQuery:query.query];
+    
+}
+
+- (void)openTwitterSearchTimelineWithQuery:(NSString *)query{
+    
+    TwitterSearchTimeline *viewController = [TwitterSearchTimeline loadFromNib:query];
     
     [self presentViewController:viewController animated:true completion:nil];
     

@@ -12,3 +12,5 @@ pod 'STTwitter'
 
 pod 'SDWebImage', '~>3.7.1'
 pod 'UIColor-HexRGB', '~> 1.0.1'
+
+pod 'Realm', '~> 0.95.2'

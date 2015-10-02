@@ -2,6 +2,9 @@ PODS:
   - Fabric (1.5.1):
     - Fabric/Base (= 1.5.1)
   - Fabric/Base (1.5.1)
+  - Realm (0.95.2):
+    - Realm/Headers (= 0.95.2)
+  - Realm/Headers (0.95.2)
   - SDWebImage (3.7.3):
     - SDWebImage/Core (= 3.7.3)
   - SDWebImage/Core (3.7.3)
@@ -12,6 +15,7 @@ PODS:
 
 DEPENDENCIES:
   - Fabric
+  - Realm (~> 0.95.2)
   - SDWebImage (~> 3.7.1)
   - STTwitter
   - TwitterCore
@@ -20,6 +24,7 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   Fabric: 03c3b3fe77e11a2bc31421b989a9c7adaa4779a5
+  Realm: 4c026902041bb39c4bd083ebc5e88f4f17973d72
   SDWebImage: 1d2b1a1efda1ade1b00b6f8498865f8ddedc8a84
   STTwitter: eb85d8770ddb0f8989f341cf41ea875e90ac6e7f
   TwitterCore: 9ec69df7571207044b1a2f57ae2c87fe73348ac5

@@ -52,11 +52,13 @@ code_sign_if_enabled() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework 'Pods/Realm.framework'
   install_framework 'Pods/SDWebImage.framework'
   install_framework 'Pods/STTwitter.framework'
   install_framework 'Pods/UIColor_HexRGB.framework'
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework 'Pods/Realm.framework'
   install_framework 'Pods/SDWebImage.framework'
   install_framework 'Pods/STTwitter.framework'
   install_framework 'Pods/UIColor_HexRGB.framework'
