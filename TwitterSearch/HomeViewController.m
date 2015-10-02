@@ -143,14 +143,14 @@ static NSString *const kBackgroundColor = @"#F5F5F5";
 
 - (IBAction)searchButtonAction:(id)sender {
     
-    
-    TwitterQuery *query = [[TwitterQuery alloc] init];
-    query.query = self.searchTextField.text;
-    
-    [[TwitterQueryManager sharedManager] addTwitterQuery:query];
-    
-    [self openTwitterSearchTimelineWithQuery:query.query];
-    
+    if (![@"" isEqualToString:self.searchTextField.text]) {
+        TwitterQuery *query = [[TwitterQuery alloc] init];
+        query.query = self.searchTextField.text;
+        
+        [[TwitterQueryManager sharedManager] addTwitterQuery:query];
+        
+        [self openTwitterSearchTimelineWithQuery:query.query];
+    }  
 }
 
 - (void)openTwitterSearchTimelineWithQuery:(NSString *)query{
