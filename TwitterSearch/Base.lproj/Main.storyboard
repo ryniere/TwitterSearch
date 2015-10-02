@@ -17,41 +17,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wya-4H-yg4">
-                                <rect key="frame" x="0.0" y="496" width="600" height="60"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wjr-kH-qwY">
-                                        <rect key="frame" x="84" y="10" width="40" height="40"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="40" id="2Kd-3V-oXh"/>
-                                            <constraint firstAttribute="height" constant="40" id="6uj-11-dfe"/>
-                                        </constraints>
-                                        <state key="normal" backgroundImage="Icon_search_big"/>
-                                        <connections>
-                                            <action selector="searchButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lly-M8-l2U"/>
-                                        </connections>
-                                    </button>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search it" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fms-TT-00I">
-                                        <rect key="frame" x="160" y="8" width="432" height="44"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="44" id="cbm-vA-Gfz"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="34"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="fms-TT-00I" secondAttribute="trailing" constant="8" id="B3P-hD-N8e">
-                                        <variation key="heightClass=regular-widthClass=compact" constant="50"/>
-                                    </constraint>
-                                    <constraint firstItem="fms-TT-00I" firstAttribute="leading" secondItem="wjr-kH-qwY" secondAttribute="trailing" constant="36" id="OqB-Wc-3gH"/>
-                                    <constraint firstAttribute="height" constant="60" id="P0f-G0-5bw"/>
-                                    <constraint firstItem="wjr-kH-qwY" firstAttribute="leading" secondItem="wya-4H-yg4" secondAttribute="leading" constant="84" id="ZTl-5d-LQB"/>
-                                    <constraint firstItem="fms-TT-00I" firstAttribute="centerY" secondItem="wya-4H-yg4" secondAttribute="centerY" id="lG5-qa-4Fu"/>
-                                    <constraint firstItem="wjr-kH-qwY" firstAttribute="centerY" secondItem="wya-4H-yg4" secondAttribute="centerY" id="xYf-4b-0Fh"/>
-                                </constraints>
-                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H4g-oO-O5u">
                                 <rect key="frame" x="145" y="244" width="310" height="202"/>
                                 <subviews>
@@ -98,6 +63,41 @@
                                     <constraint firstAttribute="height" constant="135" id="IQU-3V-1oL"/>
                                 </constraints>
                             </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wya-4H-yg4">
+                                <rect key="frame" x="0.0" y="496" width="600" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wjr-kH-qwY">
+                                        <rect key="frame" x="84" y="10" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="2Kd-3V-oXh"/>
+                                            <constraint firstAttribute="height" constant="40" id="6uj-11-dfe"/>
+                                        </constraints>
+                                        <state key="normal" backgroundImage="Icon_search_big"/>
+                                        <connections>
+                                            <action selector="searchButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lly-M8-l2U"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search it" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fms-TT-00I">
+                                        <rect key="frame" x="160" y="8" width="432" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="cbm-vA-Gfz"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="34"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="fms-TT-00I" secondAttribute="trailing" constant="8" id="B3P-hD-N8e">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="50"/>
+                                    </constraint>
+                                    <constraint firstItem="fms-TT-00I" firstAttribute="leading" secondItem="wjr-kH-qwY" secondAttribute="trailing" constant="36" id="OqB-Wc-3gH"/>
+                                    <constraint firstAttribute="height" constant="60" id="P0f-G0-5bw"/>
+                                    <constraint firstItem="wjr-kH-qwY" firstAttribute="leading" secondItem="wya-4H-yg4" secondAttribute="leading" constant="84" id="ZTl-5d-LQB"/>
+                                    <constraint firstItem="fms-TT-00I" firstAttribute="centerY" secondItem="wya-4H-yg4" secondAttribute="centerY" id="lG5-qa-4Fu"/>
+                                    <constraint firstItem="wjr-kH-qwY" firstAttribute="centerY" secondItem="wya-4H-yg4" secondAttribute="centerY" id="xYf-4b-0Fh"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -142,6 +142,7 @@
                     </view>
                     <connections>
                         <outlet property="lastSearchsTableView" destination="nM1-oi-pdz" id="f4U-up-AFR"/>
+                        <outlet property="searchContainerView" destination="wya-4H-yg4" id="g9x-aa-xja"/>
                         <outlet property="searchTextField" destination="fms-TT-00I" id="es1-K1-QwW"/>
                         <outlet property="trendsTableView" destination="8FW-J9-Q40" id="sAO-WT-Hy8"/>
                     </connections>

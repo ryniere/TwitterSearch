@@ -16,6 +16,7 @@
 
 @interface HomeViewController ()
 
+@property (strong, nonatomic) IBOutlet UIView *searchContainerView;
 @property (weak, nonatomic) IBOutlet UITextField *searchTextField;
 @property (nonatomic,strong) NSArray *trends;
 @property (strong, nonatomic) IBOutlet UITableView *lastSearchsTableView;
@@ -168,9 +169,9 @@ static NSString *const kBackgroundColor = @"#F5F5F5";
 - (void)keyboardWillShow:(NSNotification*)aNotification {
     [UIView animateWithDuration:0.25 animations:^
      {
-         CGRect newFrame = [self.view frame];
+         CGRect newFrame = [self.searchContainerView frame];
          newFrame.origin.y -= 250; // tweak here to adjust the moving position
-         [self.view setFrame:newFrame];
+         [self.searchContainerView setFrame:newFrame];
          
      }completion:^(BOOL finished)
      {
@@ -181,9 +182,9 @@ static NSString *const kBackgroundColor = @"#F5F5F5";
 - (void)keyboardWillBeHidden:(NSNotification*)aNotification {
     [UIView animateWithDuration:0.25 animations:^
      {
-         CGRect newFrame = [self.view frame];
+         CGRect newFrame = [self.searchContainerView frame];
          newFrame.origin.y += 250; // tweak here to adjust the moving position
-         [self.view setFrame:newFrame];
+         [self.searchContainerView setFrame:newFrame];
          
      }completion:^(BOOL finished)
      {

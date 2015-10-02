@@ -74,7 +74,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    return 100.0;
+    return 170;
     
 }
 
@@ -94,8 +94,6 @@
     
     cell.leftUtilityButtons = [self leftButtons];
     cell.delegate = self;
-    
-   
     
     NSDictionary *tweet = (self.results)[indexPath.row];
     cell.nameLabel.text = tweet[@"user"][@"name"];
@@ -120,7 +118,6 @@
     
     
     return cell;
-    
 }
 
 - (NSArray *)leftButtons

@@ -1563,6 +1563,23 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
+				TargetAttributes = {
+					6F84376FC6627E334DAC6ADDBF22E317 = {
+						DevelopmentTeam = Z6KC2UFRV2;
+					};
+					862F37258B8CB6BD53B97E10BFC8BFD3 = {
+						DevelopmentTeam = Z6KC2UFRV2;
+					};
+					9666688CB41B38A9914616144C9C7A3E = {
+						DevelopmentTeam = Z6KC2UFRV2;
+					};
+					B5539F4C229EB0A474296E0B36C5EEAE = {
+						DevelopmentTeam = Z6KC2UFRV2;
+					};
+					D7340328F5657BED63B31F34DBB49D8D = {
+						DevelopmentTeam = Z6KC2UFRV2;
+					};
+				};
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -1735,6 +1752,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F0425CD2FE456CA50A88EEBE4E1A8697 /* SWTableViewCell-Private.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 0.3.7;
 				DEFINES_MODULE = YES;
@@ -1750,6 +1768,7 @@
 				MODULEMAP_FILE = "Target Support Files/SWTableViewCell/SWTableViewCell.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = SWTableViewCell;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1791,6 +1810,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B0E3AF2E6191651680CD52887FBC3A87 /* Realm-Private.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 0.95.2;
 				DEFINES_MODULE = YES;
@@ -1806,6 +1826,7 @@
 				MODULEMAP_FILE = "Target Support Files/Realm/Realm.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = Realm;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1818,6 +1839,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7B952AAFD209D00B4D2A943A79F286C7 /* UIColor-HexRGB-Private.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1.0.1;
 				DEFINES_MODULE = YES;
@@ -1833,6 +1855,7 @@
 				MODULEMAP_FILE = "Target Support Files/UIColor-HexRGB/UIColor-HexRGB.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = UIColor_HexRGB;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1845,6 +1868,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 981E8E5CE606C1CB4F23A5658AEFD04C /* SDWebImage-Private.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 3.7.3;
 				DEFINES_MODULE = YES;
@@ -1860,6 +1884,7 @@
 				MODULEMAP_FILE = "Target Support Files/SDWebImage/SDWebImage.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = SDWebImage;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1940,6 +1965,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7B952AAFD209D00B4D2A943A79F286C7 /* UIColor-HexRGB-Private.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1.0.1;
 				DEFINES_MODULE = YES;
@@ -1955,6 +1981,7 @@
 				MODULEMAP_FILE = "Target Support Files/UIColor-HexRGB/UIColor-HexRGB.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = UIColor_HexRGB;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1967,6 +1994,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 981E8E5CE606C1CB4F23A5658AEFD04C /* SDWebImage-Private.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 3.7.3;
 				DEFINES_MODULE = YES;
@@ -1982,6 +2010,7 @@
 				MODULEMAP_FILE = "Target Support Files/SDWebImage/SDWebImage.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = SDWebImage;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1994,6 +2023,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F0425CD2FE456CA50A88EEBE4E1A8697 /* SWTableViewCell-Private.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 0.3.7;
 				DEFINES_MODULE = YES;
@@ -2009,6 +2039,7 @@
 				MODULEMAP_FILE = "Target Support Files/SWTableViewCell/SWTableViewCell.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = SWTableViewCell;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -2021,6 +2052,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9CBAB539DE600F67E76AFAF637869CAA /* STTwitter-Private.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 0.2.2;
 				DEFINES_MODULE = YES;
@@ -2036,6 +2068,7 @@
 				MODULEMAP_FILE = "Target Support Files/STTwitter/STTwitter.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = STTwitter;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -2048,6 +2081,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B0E3AF2E6191651680CD52887FBC3A87 /* Realm-Private.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 0.95.2;
 				DEFINES_MODULE = YES;
@@ -2063,6 +2097,7 @@
 				MODULEMAP_FILE = "Target Support Files/Realm/Realm.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = Realm;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -2075,6 +2110,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9CBAB539DE600F67E76AFAF637869CAA /* STTwitter-Private.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 0.2.2;
 				DEFINES_MODULE = YES;
@@ -2090,6 +2126,7 @@
 				MODULEMAP_FILE = "Target Support Files/STTwitter/STTwitter.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = STTwitter;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
